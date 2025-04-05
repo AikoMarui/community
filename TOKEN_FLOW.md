@@ -69,7 +69,7 @@ Essa operação garante que o lojista receba, em reais, o valor correspondente a
 
 O diagrama abaixo ilustra o fluxo completo do processo:
 
-‘‘‘mermaid
+'''mermaid
 flowchart TD
     A[Emissão do Token] --> B[Depósito do valor em R$ na conta bancária do emissor]
     A --> C[Envio dos tokens para o Cliente]
@@ -79,7 +79,7 @@ flowchart TD
     F --> G[Admin recebe tokens e dispara automação]
     G --> H[Automação converte tokens em valor (R$)]
     H --> I[Transferência bancária via API PIX para a conta do Lojista]
-’’’
+'''
 
 Legenda:
 
