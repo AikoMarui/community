@@ -39,7 +39,7 @@ Um percentual das transações realizadas dentro da comunidade, por meio das tro
 
 Criação de Tokens:
 
-Comunidades podem emitir seus próprios tokens, lastreados em stablecoins (como USDT para dólar ou BRZ para real), que servem como meio de troca interno.
+Comunidades podem emitir seus próprios tokens, que servem como meio de troca interno.
 
 Os tokens possibilitam a realização de transações e recompensas entre os membros.
 
