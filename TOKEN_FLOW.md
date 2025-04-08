@@ -69,7 +69,7 @@ Essa operação garante que o lojista receba, em reais, o valor correspondente a
 
 O diagrama abaixo ilustra o fluxo completo do processo:
 
-'''mermaid
+```mermaid
 flowchart TD
     A[Emissão do Token] --> B[Depósito do valor em R$ na conta bancária do emissor]
     A --> C[Envio dos tokens para o Cliente]
@@ -79,7 +79,7 @@ flowchart TD
     F --> G[Admin recebe tokens e dispara automação]
     G --> H[Automação converte tokens em valor (R$)]
     H --> I[Transferência bancária via API PIX para a conta do Lojista]
-'''
+```
 
 Legenda:
 
@@ -107,6 +107,7 @@ Monitoramento de Eventos: Utilização de bibliotecas (ex.: Web3.py para Ethereu
 
 Exemplo de Código (simplificado):
 
+```py
 from web3 import Web3
 
 w3 = Web3(Web3.HTTPProvider("https://seu_provedor_rpc"))
@@ -124,7 +125,7 @@ evento_transfer = contrato.events.Transfer.createFilter(fromBlock='latest')
 while True:
     for evento in evento_transfer.get_new_entries():
         tratar_evento_transfer(evento)
-
+```
 
 4.2. Mapeamento de Carteiras e Contas Bancárias
 
@@ -145,10 +146,9 @@ Fluxo da Automação:
 
 3. Requisição à API PIX para transferência bancária para a conta do lojista.
 
-
-
 Exemplo de Código (simplificado):
 
+```py
 import requests
 
 def obter_token_pix():
@@ -177,7 +177,7 @@ def disparar_automacao(quantidade_tokens):
     chave_destino = "chave_pix_lojista@example.com"
     resultado = transferencia_pix(chave_destino, valor_em_reais)
     print("Resultado da transferência:", resultado)
-
+```
 
 
 ---
@@ -186,6 +186,7 @@ def disparar_automacao(quantidade_tokens):
 
 Para visualizar a interação entre as partes do sistema, veja o diagrama de sequência abaixo:
 
+```mermaid
 sequenceDiagram
     participant Cliente
     participant Lojista
@@ -203,7 +204,7 @@ sequenceDiagram
     SistemaAutomacao->>BancoAPI: Solicita transferência bancária (valor correspondente)
     BancoAPI-->>SistemaAutomacao: Confirma transferência
     SistemaAutomacao->>Lojista: Notifica recebimento em reais
-
+```
 
 ---
 
