@@ -77,7 +77,7 @@ flowchart TD
     D --> E[Transferência dos tokens do Cliente para o Lojista]
     E --> F[Lojista repassa os tokens para o Administrador]
     F --> G[Admin recebe tokens e dispara automação]
-    G --> H[Automação converte tokens em valor (R$)]
+    G --> H[Automação converte tokens em valor R$]
     H --> I[Transferência bancária via API PIX para a conta do Lojista]
 ```
 
